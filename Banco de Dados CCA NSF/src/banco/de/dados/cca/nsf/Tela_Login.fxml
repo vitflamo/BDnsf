@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" onMouseDragged="#DragMouse" onMousePressed="#PressMouse" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banco.de.dados.cca.nsf.Controlador_Login">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: transparent;">
+         <children>
+            <Label layoutX="6.0" layoutY="10.0" prefHeight="35.0" prefWidth="277.0" text="Banco de Dados CCA NSF" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="308.0" layoutY="5.0" mnemonicParsing="false" onAction="#MinimizeButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #B0E2FF; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="-">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="354.0" layoutY="5.0" mnemonicParsing="false" onAction="#CloseButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FF4040; -fx-text-fill: white; -fx-background-radius: 50 50 50 50;" text="✕" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="5.0" layoutY="50.0" prefHeight="245.0" prefWidth="389.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btn_logar" layoutX="203.0" layoutY="181.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="50.0" prefWidth="173.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Entrar ⇲">
+               <font>
+                  <Font name="Verdana" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txt_user" layoutX="203.0" layoutY="76.0" prefHeight="25.0" prefWidth="173.0" />
+            <Label layoutX="157.0" layoutY="6.0" prefHeight="35.0" prefWidth="75.0" text="Login">
+               <font>
+                  <Font name="Verdana" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="71.0" prefHeight="35.0" prefWidth="173.0" text="Nome de usuário:">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="119.0" prefHeight="35.0" prefWidth="75.0" text="Senha:">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="13.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="173.0" style="-fx-background-color: #EEB422; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Recuperar Senha">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbl_erro" layoutX="76.0" layoutY="149.0" prefHeight="35.0" prefWidth="238.0" text="Usuário e/ou senha incorreto(s)." textFill="#ff4040" visible="false">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txt_senha" layoutX="202.0" layoutY="124.0" prefHeight="25.0" prefWidth="173.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

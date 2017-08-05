@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banco.de.dados.cca.nsf.Controlador_CadastrarResp">
+   <children>
+      <Pane onMouseDragged="#DragMouse" onMousePressed="#PressMouse" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button layoutX="952.0" layoutY="5.0" mnemonicParsing="false" onAction="#CloseButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FF4040; -fx-text-fill: white; -fx-background-radius: 50 50 50 50;" text="✕" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="899.0" layoutY="5.0" mnemonicParsing="false" onAction="#MinimizeButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #B0E2FF; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="-">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Sair ⇱">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="304.0" layoutY="8.0" prefHeight="35.0" prefWidth="277.0" text="Banco de Dados CCA NSF" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="5.0" layoutY="49.0" prefHeight="695.0" prefWidth="989.0" style="-fx-background-color: #B0E2FF;">
+         <children>
+            <Pane prefHeight="695.0" prefWidth="751.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="10.0" layoutY="14.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color: #EEB422; -fx-background-radius: 50 50 50 50; -fx-alignment: center;" text="Cadastro de Responsável">
+                     <font>
+                        <Font name="Verdana" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="22.0" layoutY="634.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Cadastrar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="358.0" layoutY="20.0" prefHeight="35.0" prefWidth="55.0" text="Código:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="413.0" layoutY="25.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #B0E2FF;" />
+                  <ComboBox fx:id="arquivomorto" layoutX="579.0" layoutY="25.0" prefWidth="150.0" promptText="Arquivo Morto" style="-fx-background-color: #B0E2FF;" />
+                  <TextField layoutX="85.0" layoutY="55.0" prefHeight="25.0" prefWidth="644.0" />
+                  <Label layoutX="28.0" layoutY="50.0" prefHeight="35.0" prefWidth="55.0" text="Nome:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="85.0" layoutY="85.0" prefHeight="25.0" prefWidth="150.0" promptText="Grau de Parentesco" style="-fx-background-color: #B0E2FF;" />
+                  <ComboBox layoutX="250.0" layoutY="85.0" prefWidth="150.0" promptText="Estado Civil" style="-fx-background-color: #B0E2FF;" />
+                  <ComboBox layoutX="415.0" layoutY="85.0" prefWidth="150.0" promptText="Grau de Instrução" style="-fx-background-color: #B0E2FF;" />
+                  <Label layoutX="12.0" layoutY="120.0" prefHeight="35.0" prefWidth="75.0" text="Profissão:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="85.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField layoutX="331.0" layoutY="125.0" prefHeight="25.0" prefWidth="174.0" />
+                  <Label layoutX="255.0" layoutY="120.0" prefHeight="35.0" prefWidth="83.0" text="Ocupação:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="579.0" layoutY="85.0" prefHeight="25.0" prefWidth="150.0" promptText="Estado de Trabalho" style="-fx-background-color: #B0E2FF;" />
+                  <Label layoutX="525.0" layoutY="120.0" prefHeight="35.0" prefWidth="55.0" text="Renda:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="580.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField layoutX="85.0" layoutY="200.0" prefHeight="25.0" prefWidth="422.0" />
+                  <Label layoutX="39.0" layoutY="195.0" prefHeight="35.0" prefWidth="43.0" text="Rua:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="293.0" layoutY="255.0" prefHeight="35.0" prefWidth="32.0" text="Nº:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="330.0" layoutY="260.0" prefHeight="25.0" prefWidth="55.0" />
+                  <Label layoutX="469.0" layoutY="225.0" prefHeight="35.0" prefWidth="107.0" text="Complemento:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="580.0" layoutY="230.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField layoutX="580.0" layoutY="200.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="541.0" layoutY="195.0" prefHeight="35.0" prefWidth="43.0" text="CEP:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="225.0" prefHeight="35.0" prefWidth="55.0" text="Bairro:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="85.0" layoutY="230.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField layoutX="85.0" layoutY="260.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="19.0" layoutY="255.0" prefHeight="35.0" prefWidth="83.0" text="Distrito:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="425.0" layoutY="255.0" prefHeight="35.0" prefWidth="159.0" text="Ponto de Referência:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="580.0" layoutY="260.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="245.0" layoutY="390.0" prefHeight="35.0" prefWidth="91.0" text="Residencial:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="85.0" layoutY="395.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField layoutX="332.0" layoutY="395.0" prefHeight="25.0" prefWidth="174.0" />
+                  <Label layoutX="19.0" layoutY="390.0" prefHeight="35.0" prefWidth="67.0" text="Celular:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="525.0" layoutY="390.0" prefHeight="35.0" prefWidth="55.0" text="Outro:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="579.0" layoutY="395.0" prefHeight="25.0" prefWidth="150.0" />
+                  <ComboBox layoutX="85.0" layoutY="290.0" prefHeight="25.0" prefWidth="150.0" promptText="Condição Moradia" style="-fx-background-color: #B0E2FF;" />
+                  <TextField layoutX="330.0" layoutY="230.0" prefHeight="25.0" prefWidth="55.0" />
+                  <Label layoutX="253.0" layoutY="225.0" prefHeight="35.0" prefWidth="75.0" text="Cômodos:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="285.0" prefHeight="35.0" prefWidth="251.0" text="Valor do Aluguel/Financiamento:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="580.0" layoutY="290.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField layoutX="580.0" layoutY="320.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="436.0" layoutY="313.0" prefHeight="40.0" prefWidth="143.0" text="Tipo de construção:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="78.0" layoutY="315.0" prefHeight="35.0" prefWidth="165.0" text="Situação Habitacional:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="237.0" layoutY="320.0" prefHeight="25.0" prefWidth="150.0" />
+                  <CheckBox layoutX="19.0" layoutY="487.0" mnemonicParsing="false" text="Nenhum" />
+                  <Label layoutX="22.0" layoutY="548.0" prefHeight="35.0" prefWidth="43.0" text="BDC:">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="66.0" layoutY="553.0" prefHeight="25.0" prefWidth="150.0" />
+                  <ComboBox layoutX="237.0" layoutY="553.0" prefHeight="25.0" prefWidth="165.0" promptText="Prestação Continuada" style="-fx-background-color: #B0E2FF;" />
+                  <CheckBox layoutX="122.0" layoutY="487.0" mnemonicParsing="false" text="Renda Mínima" />
+                  <CheckBox layoutX="19.0" layoutY="516.0" mnemonicParsing="false" text="Bolsa Família" />
+                  <CheckBox layoutX="235.0" layoutY="487.0" mnemonicParsing="false" text="Renda Cidadã" />
+                  <CheckBox layoutX="118.0" layoutY="516.0" mnemonicParsing="false" text="Ação Jovem" />
+                  <CheckBox layoutX="233.0" layoutY="516.0" mnemonicParsing="false" text="PETI" />
+                  <TextField layoutX="451.0" layoutY="516.0" prefHeight="25.0" prefWidth="165.0" />
+                  <TextField layoutX="451.0" layoutY="553.0" prefHeight="25.0" prefWidth="165.0" />
+                  <TextField layoutX="451.0" layoutY="588.0" prefHeight="25.0" prefWidth="165.0" />
+                  <TextField layoutX="451.0" layoutY="621.0" prefHeight="25.0" prefWidth="165.0" />
+                  <TextField layoutX="451.0" layoutY="483.0" prefHeight="25.0" prefWidth="165.0" />
+                  <Label layoutX="10.0" layoutY="160.0" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #EEB422; -fx-background-radius: 50 50 50 50; -fx-alignment: center;" text="Endereço">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="437.0" prefHeight="35.0" prefWidth="329.0" style="-fx-background-color: #EEB422; -fx-background-radius: 50 50 50 50; -fx-alignment: center;" text="Programas de Transferência de Renda">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="353.0" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #EEB422; -fx-background-radius: 50 50 50 50; -fx-alignment: center;" text="Telefones">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="454.0" layoutY="437.0" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #EEB422; -fx-background-radius: 50 50 50 50; -fx-alignment: center;" text="Usuário(s)">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" layoutX="425.0" layoutY="550.0" rotate="-90.0" startX="-100.0" />
+               </children></Pane>
+            <Button layoutX="760.0" layoutY="169.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Cadastrar Responsável">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #EEB422; -fx-text-fill: #222; -fx-background-radius: 50 50 50 50;" text="Cadastros">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="14.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #222; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Menu">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="221.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Cadastrar Usuário">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="377.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Consultar Usuário">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="323.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Consultar Responsável">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="273.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #EEB422; -fx-text-fill: #222; -fx-background-radius: 50 50 50 50;" text="Consultas">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="429.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #EEB422; -fx-text-fill: #222; -fx-background-radius: 50 50 50 50;" text="Extras">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="483.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Créditos">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="537.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Manual">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="591.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Backup">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="65.0" mnemonicParsing="false" onAction="#HomeButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Página Inicial">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="641.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Restauração">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

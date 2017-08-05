@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banco.de.dados.cca.nsf.Controlador_Home">
+   <children>
+      <Pane onMouseDragged="#DragMouse" onMousePressed="#PressMouse" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button layoutX="899.0" layoutY="5.0" mnemonicParsing="false" onAction="#MinimizeButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #B0E2FF; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="-">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Sair ⇱">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="271.0" layoutY="7.0" prefHeight="35.0" prefWidth="277.0" text="Banco de Dados CCA NSF" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="950.0" layoutY="5.0" mnemonicParsing="false" onAction="#CloseButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FF4040; -fx-text-fill: white; -fx-background-radius: 50 50 50 50;" text="✕" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="5.0" layoutY="49.0" prefHeight="695.0" prefWidth="989.0" style="-fx-background-color: #B0E2FF;">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="695.0" prefWidth="751.0" style="-fx-background-color: white;" />
+            <Button layoutX="760.0" layoutY="169.0" mnemonicParsing="false" onAction="#CadRespButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Cadastrar Responsável">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #EEB422; -fx-text-fill: #222; -fx-background-radius: 50 50 50 50;" text="Cadastros">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="14.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #222; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Menu">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="221.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Consultar Usuário">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="377.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Consultar Usuário">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="323.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Consultar Responsável">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="273.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #EEB422; -fx-text-fill: #222; -fx-background-radius: 50 50 50 50;" text="Consultas">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="429.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #EEB422; -fx-text-fill: #222; -fx-background-radius: 50 50 50 50;" text="Extras">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="483.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Créditos">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="537.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Manual">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="591.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Backup">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="65.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Página Inicial">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="760.0" layoutY="641.0" mnemonicParsing="false" onAction="#DeslogarButton" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Restauração">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" onMouseDragged="#DragMouse" onMousePressed="#PressMouse" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: rgb(0,0,0, 0.5);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banco.de.dados.cca.nsf.Controlador_SplashScreen">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: transparent;">
+         <children>
+            <Label layoutX="62.0" layoutY="8.0" prefHeight="35.0" prefWidth="277.0" text="Banco de Dados CCA NSF" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ProgressBar fx:id="pgb_progresso" layoutX="62.0" layoutY="204.0" prefHeight="24.0" prefWidth="277.0" progress="0.0" />
+      <Button layoutX="114.0" layoutY="236.0" mnemonicParsing="false" onAction="#AvanteButton" prefHeight="50.0" prefWidth="173.0" style="-fx-background-color: #43CD80; -fx-text-fill: White; -fx-background-radius: 50 50 50 50;" text="Avançar ⇲">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
